@@ -7,15 +7,18 @@ jobs:
         name: Linting Code
         runs-on: ubuntu-latest
 
+        permissions:
+          contents: read
+          packages: read
+          statuses: write
+
         steps:
             - name: Checkout Code
               uses: actions/checkout@v2
               with:
                 fetch-depth: 0
         
-            - name: Performing Linting
-              uses: github/super-linter@v3
+            - name: Run Super-Linter
+              uses: super-linter/super-linter@v8.2.0
               env:
-                VALIDATE_ALL_CODEBASE: false
-                DEFAULT_BRANCH: master
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
