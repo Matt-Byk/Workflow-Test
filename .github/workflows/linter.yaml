@@ -25,7 +25,10 @@ jobs:
                 VALIDATE_ALL_CODEBASE: false
                 LOG_LEVEL: WARN
 
-                # Config Folder
+                # Lint source code only
+                FILTER_REGEX_INCLUDE: ^source/
+
+                # Path to config folder
                 LINTER_RULES_PATH: config/linter
 
                 # Config: javascript
