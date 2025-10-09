@@ -1,6 +1,6 @@
 name: Linter
 
-on: [pull_request]
+on: [push, pull_request]
 
 jobs:
     build:
@@ -21,9 +21,20 @@ jobs:
             - name: Run Super-Linter
               uses: super-linter/super-linter@v8.2.0
               env:
-                VALIDATE_ALL_CODEBASE: false
                 GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                VALIDATE_ALL_CODEBASE: false
                 LOG_LEVEL: WARN
 
+                # Config Folder
+                LINTER_RULES_PATH: config/linter
+
+                # Config: javascript
+                JAVASCRIPT_ES_CONFIG_FILE: eslint.config.js
+                VALIDATE_JAVASCRIPT_STANDARD: false
+
+                # Config: typescript
+                # Add later
+
+                # Languages to validate
                 VALIDATE_JAVASCRIPT_ES: true
                 VALIDATE_TYPESCRIPT_ES: true
