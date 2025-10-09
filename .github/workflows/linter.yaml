@@ -28,16 +28,6 @@ jobs:
                 # Lint source code only
                 FILTER_REGEX_INCLUDE: ^source/
 
-                # Path to config folder
-                LINTER_RULES_PATH: config/linter
-
-                # Config: javascript
-                JAVASCRIPT_ES_CONFIG_FILE: eslint.config.js
-                VALIDATE_JAVASCRIPT_STANDARD: false
-
-                # Config: typescript
-                # Add later
-
                 # Languages to validate
                 VALIDATE_JAVASCRIPT_ES: true
                 VALIDATE_TYPESCRIPT_ES: true
