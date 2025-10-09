@@ -12,4 +12,4 @@ function add(array, val)
 // Functions available to other classes (tests)
 module.exports = { copy, add };
 
-unused = 5;
+unused = 6;
