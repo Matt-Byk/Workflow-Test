@@ -8,7 +8,7 @@ export default defineConfig
 		plugins: {
 			js,
 		},
-		extends: ["js/recommended"],
+		extends: ["plugin:@eslint/js/recommended"],
 		rules: {
 			"no-unused-vars": "warn",
 		},
